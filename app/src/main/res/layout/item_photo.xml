@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- A relative layout for the poster's details - profile picture,
+         username, and time stamp -->
+    <RelativeLayout
+        android:id="@+id/relative_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="70dp"
+        android:paddingLeft="@dimen/item_photo_horizontal_padding"
+        android:paddingRight="@dimen/item_photo_horizontal_padding">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/circle_image_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:minHeight="30dp"
+            app:civ_border_color="@color/style_color_profile_highlight"
+            app:civ_border_width="1dp" />
+
+        <TextView
+            android:id="@+id/text_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/circle_image_profile"
+            android:layout_toRightOf="@+id/circle_image_profile"
+            android:paddingLeft="@dimen/item_photo_username_horizontal_padding"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/style_color_primary" />
+
+        <TextView
+            android:id="@+id/text_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/style_color_grey_text" />
+    </RelativeLayout>
+
+    <!-- The photo for the post stands on its own relative to our user details layout -->
+
+    <ImageView
+        android:id="@+id/image_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/relative_profile" />
+
+    <!-- A linear layout to horizontally render the likes heart and
+         likes count -->
+
+    <LinearLayout
+        android:id="@+id/linear_likes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_post"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/item_photo_horizontal_padding"
+        android:paddingTop="@dimen/item_photo_vertical_padding">
+
+        <ImageView
+            android:id="@+id/image_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/text_likes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/item_photo_likes_text_view_horizontal_padding"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/style_color_primary" />
+    </LinearLayout>
+
+    <!-- Our caption and the 2 most recent comments layout vertically below our likes count -->
+
+    <TextView
+        android:id="@+id/text_caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linear_likes"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:paddingLeft="@dimen/item_photo_horizontal_padding"
+        android:paddingRight="@dimen/item_photo_horizontal_padding"
+        android:paddingTop="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/style_color_primary" />
+
+    <TextView
+        android:id="@+id/text_firstcomment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_caption"
+        android:paddingLeft="@dimen/item_photo_horizontal_padding"
+        android:paddingRight="@dimen/item_photo_horizontal_padding"
+        android:paddingTop="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/style_color_primary" />
+
+    <TextView
+        android:id="@+id/text_secondcomment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_firstcomment"
+        android:paddingBottom="@dimen/item_photo_vertical_padding"
+        android:paddingLeft="@dimen/item_photo_horizontal_padding"
+        android:paddingRight="@dimen/item_photo_horizontal_padding"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/style_color_primary" />
+</RelativeLayout>
