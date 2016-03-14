@@ -1,6 +1,7 @@
 # Project 1 - cloneInstagram
 
-Instagram is an android app that allows a user to check out popular photos from Instagram. 
+cloneInstagram is an android app that allows a user to check out popular photos from Instagram. 
+
 Time spent: 09 hours spent in total
 
 ## User Stories
