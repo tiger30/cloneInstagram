@@ -30,6 +30,14 @@ The following **additional** features are implemented:
 * [X] Use GSON to create the models from the JSON response instead of manually parsing the JSON
 * [X] Display each user profile image using a RoundedImageViewDisplay each user profile image using a [CircleImageView](https://github.com/hdodenhof/CircleImageView)
 
+The following **ADVANCED** features will be implemented:
+* [ ] User can login/register/logout an Instagram account.
+* [ ] User can pick picture from Android gallery as well as taking a photo by camera.
+* [ ] Using RecycleView to display all uploaded photos.
+* [ ] When user taps on a photo in the photo list screen, open up a photo viewer screen. This photo viewer screen should enlarge the photo and support gesture zooming.
+
+* [ ] Test
+
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
